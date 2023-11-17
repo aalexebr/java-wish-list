@@ -1,7 +1,9 @@
 package org.lessons.java.christmas;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -10,11 +12,12 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		
 		List <String> giftArray = new ArrayList <>();
-//		bonus
+//		bonus1
 		List <Gift> giftObjArray = new ArrayList <>();
+//		bonus2
+		Map <String,String> giftMap = new HashMap<>();
 		
-		
-		
+
 		while(true) {
 			System.out.print("add item? y/n");
 			String next = in.nextLine();
@@ -25,13 +28,16 @@ public class Main {
 			String gift = in.nextLine();
 			giftArray.add(gift);
 			
-//			bonus
+//			bonus1
 			System.out.print("for: ");
-			String x = in.nextLine();
+			String recepient = in.nextLine();
 			
-//			bonus
-			Gift g = new Gift(gift, x);
+//			bonus1
+			Gift g = new Gift(gift, recepient);
 			giftObjArray.add(g);
+			
+//			bonus2 
+			giftMap.put(recepient, gift);
 
 			System.out.println("list length: "+giftArray.size());
 				
@@ -40,7 +46,11 @@ public class Main {
 //		System.out.println(giftArray);
 		in.close();
 //		bonus print
-		System.out.println(giftObjArray);
+//		System.out.println(giftObjArray);
+//		bonus2 print
+		System.out.println(giftMap);
+		
+		
 	}
 
 }
