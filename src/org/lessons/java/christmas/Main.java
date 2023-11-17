@@ -1,3 +1,5 @@
+package org.lessons.java.christmas;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,6 +10,9 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		
 		List <String> giftArray = new ArrayList <>();
+		List <Gift> giftObjArray = new ArrayList <>();
+		
+		
 		
 		while(true) {
 			System.out.print("add item? y/n");
@@ -17,15 +22,24 @@ public class Main {
 			
 			System.out.print("add new item: ");
 			String gift = in.nextLine();
-			
 			giftArray.add(gift);
-			giftArray.size();
+			
+//			bonus
+			System.out.print("for: ");
+			String x = in.nextLine();
+			
+//			bonus
+			Gift g = new Gift(gift, x);
+			giftObjArray.add(g);
+
 			System.out.println("list length: "+giftArray.size());
 				
 			
 		}
-		System.out.println(giftArray);
+//		System.out.println(giftArray);
 		in.close();
+		
+		System.out.println(giftObjArray);
 	}
 
 }
