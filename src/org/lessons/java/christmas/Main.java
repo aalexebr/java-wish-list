@@ -10,6 +10,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		
 		List <String> giftArray = new ArrayList <>();
+//		bonus
 		List <Gift> giftObjArray = new ArrayList <>();
 		
 		
@@ -20,7 +21,7 @@ public class Main {
 			char c = next.charAt(0);
 			if(c== 'n') break;
 			
-			System.out.print("add new item: ");
+			System.out.print("add new gift: ");
 			String gift = in.nextLine();
 			giftArray.add(gift);
 			
@@ -38,7 +39,7 @@ public class Main {
 		}
 //		System.out.println(giftArray);
 		in.close();
-		
+//		bonus print
 		System.out.println(giftObjArray);
 	}
 

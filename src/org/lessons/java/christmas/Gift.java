@@ -2,36 +2,36 @@ package org.lessons.java.christmas;
 
 public class Gift {
 	
-	private String name;
-	private String to;
+	private String nameOfGift;
+	private String recepient;
 	 
-	public Gift(String name, String to) {
-		setName(name);
-		setTo(to);
+	public Gift(String name, String recepient) {
+		setNameOfGift(recepient);
+		setRecepient(recepient);
 	}
 
-	public String getName() {
-		return name;
+	public String getNameOfGift() {
+		return nameOfGift;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNameOfGift(String nameOfGift) {
+		this.nameOfGift = nameOfGift;
 	}
 
-	public String getTo() {
-		return to;
+	public String getRecepient() {
+		return recepient;
 	}
 
-	public void setTo(String to) {
-		this.to = to;
+	public void setRecepient(String recepient) {
+		this.recepient = recepient;
 	}
 	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return 	"GIFT: \n"+
-				"gift: "+ getName()+"\n"+
-				"for: "+ getTo();
+				"gift: "+ getNameOfGift()+"\n"+
+				"for: "+ getRecepient();
 	}
 	
 }
